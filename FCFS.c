@@ -123,6 +123,9 @@ void drawGanttChart(int noOfProcess)
             printf("\t%d\t%d", gantt.AT[i], gantt.CT[i]);
         }
 
+        else if(gantt.AT[i] == 0){
+            printf("%d\t%d", gantt.AT[i], gantt.AT[i] + myTable.BT[i]);
+        }
         else
         {
             if (gantt.AT[i] == prevCompletionTime)
